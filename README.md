@@ -1,16 +1,32 @@
-![Mantis Toboggan](https://raw.githubusercontent.com/moe-szyslak/Mantis-Toboggan/master/Mantis-Toboggan.png "Mantis Toboggan")
+# Showtime
+This project (continuation) aims to add features on-top of [Mantis-Toboggan](https://github.com/moe-szyslak/Mantis-Toboggan)
 
-# Mantis Toboggan, MD
-Scraper for Edna Mall's showtime
-
-## API Usage
-**The app is hosted on Heroku running on a single dyno, so expect delay when app is waking up.**
+### Features / Improvements
+- [X] Own repository and organization - as `Mantis-Toboggan` only targets Edna Mall
+- [ ] Add 3D flag for 3D movies (Edna Mall only)
+- [ ] Scraping Ethio-Yellow pages for **all** cinema showtimes
+- [ ] Connect with Ethio-IMDB for Amharic movies
+- [ ] Telegram bot to fix typos (especially on Amharic movies)
 
 ```bash
-$ http GET https://ednamall.herokuapp.com/api # returns showtimes
-$ http GET https://ednamall.herokuapp.com/poster/?url=<poster_url> # returns base64 encoding of image
+# API interface (public)
+$ http GET https://api.io/ # list all cinema showtimes
+$ http GET https://api.io/:cinima-name # list specific cinema showtime
+$ http GET https://api.io/:cinema-id # list specific cinema showtime via ID (TBD)
+
+# API interface for Telegram Bot (authenticated via Telegram ID)
+$ http GET https://api.io/bot # return movie list for today `MOVIE_TITLE`
+$ http PUT https://api.io/bot # add / update a correct movie title
+
+# Telegram
+/list # return all movie list
+MOVIE_TITLE > NEW_MOVIE_TITLE
 ```
 
-⚠️ The API auto-deletes information on a scraped data after 30 days
+### What it will not have
+- Showtime for specific date as database will be flushed to maintain a free-tier
 
-Contributions are welcome
+### Stack (Alphabetical Order) - TBD
+- Language: Java, Node (current), PHP, Python
+- Database: Mongo, MySQL, Postgres (current)
+- Platform: AWS, Digital Ocean, Heroku (current), Linode
