@@ -1,11 +1,11 @@
 # Showtime
-This project (continuation) aims to add features on-top of [Mantis-Toboggan](https://github.com/moe-szyslak/Mantis-Toboggan)
+This project (continuation) aims to add features on-top of [Mantis-Toboggan](https://github.com/utopiaio/Mantis-Toboggan)
 
 ### Features / Improvements
 - [X] Own repository and organization - as `Mantis-Toboggan` only targets Edna Mall
 - [ ] Add 3D flag for 3D movies (Edna Mall only)
 - [ ] Scraping Ethio-Yellow pages for **all** cinema showtimes
-- [ ] Connect with Ethio-IMDB for Amharic movies
+- [ ] Connect with ETMDB for Amharic movies (has usage restrictions - should be opt-in)
 - [ ] Telegram bot to fix typos (especially on Amharic movies)
 
 ```bash
